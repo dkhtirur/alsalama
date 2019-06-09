@@ -1,0 +1,81 @@
+.stores {
+    .stores-container {
+        display: flex;
+
+        .list-group {
+            flex-basis: 20%;
+            flex-basis: 12%;
+            position: absolute;
+            // right: 50px;
+            right: 70px;
+            width: 199px;
+            
+            /* top: 100px; */
+            margin-top: 4px;
+
+            .list-group-item {
+                border: 1px solid rgba(193, 193, 193, 0.125);
+                cursor: pointer;
+
+                &.store-heading {
+                    padding: 10px 12px;
+                    h6.marker-heading {
+                        margin-bottom: 0px;
+                        font-size: 12px;
+                        color: #93959f;
+                    }
+                }
+
+                a.list-group-item {
+                    padding: 12px;
+
+                    border: 1px solid rgba(193, 193, 193, 0.125);
+
+
+                  
+
+                }
+
+                &.marker-active{
+                    background: aliceblue;
+                }
+
+            }
+
+            .marker-detail {
+                .marker-caption {
+                    font-size: 12px;
+
+                    small {
+                        line-height: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.marker {
+    &.marker-active{
+        
+    }
+
+    .marker-info {
+        background: white;
+        width: 100px;
+        height: 20px;
+        border-radius: 2px;
+
+        .marker-caption {
+            font-size: 12px;
+        }
+    }
+
+    img {
+        &.location {
+            width: 30px;
+        }
+
+    }
+
+}
