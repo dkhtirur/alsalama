@@ -40,8 +40,16 @@ class Marker extends Component {
         return (
             <div className={`marker ${marker.expanded ? 'marker-active' : 'marker-inactive'}`}>
                 <div className="marker-info">
-                    {marker.caption}
 
+                    <p className="marker-caption">
+                        {marker.caption}
+
+                    </p>
+
+
+                    <small className="marker-address">
+                        {marker.address}
+                    </small>
                 </div>
 
                 <img className="location" src={m}></img>
@@ -61,17 +69,31 @@ export default class Stores extends Component {
             activeIndex: 0,
             markers: [
                 {
-                    caption: 'BigMarket',
+                    caption: 'JP Nagar',
+                    address: 'Bus Stop, 602, 15th Cross, Outer Ring Rd, Opp, JP Nagar Phase 6, Bengaluru, Karnataka 560078',
+                    lat: 12.906100, lng: 77.580450,
+                    zoom: 13
+                },
+                {
+                    caption: 'Sahakara Nagar',
                     address: '26/1, Ground Floor, G Block, Spoorthi Complex, Sahakara Nagar, Bengaluru',
-                    lat: 12.976750, lng: 77.575280,
+                    lat: 13.058840, lng: 77.581070,
                     zoom: 18
 
                 },
                 {
-                    caption: 'BigMarket Two',
-                    address: 'Bus Stop, 602, 15th Cross, Outer Ring Rd, Opp, JP Nagar Phase 6, Bengaluru',
+                    caption: 'JP Nagar',
+                    address: 'No. 78/79, 24TH MAIN Road, NEAR SHOBHA TULIP APT, 5th Phase, J. P. Nagar, Bengaluru, Karnataka 560078',
+                    lat: 12.906100, lng: 77.580450,
+                    zoom: 18
+
+                },
+                {
+                    caption: 'Hennur Main Rd',
+                    address: '# 1 & 2, Opp. XLR8, Hennur Main Rd, Kothanur, Bengaluru, Karnataka 560077',
                     lat: 52.955413, lng: 31.337844
-                }, {
+                },
+                {
                     caption: 'Bigmarket three',
                     address: 'Bus Stop, 602, 15th Cross, Outer Ring Rd, Opp, JP Nagar Phase 6, Bengaluru',
 
@@ -129,7 +151,7 @@ export default class Stores extends Component {
                     </h1>
 
                     <p className="page-desc">
-                        We have 16 bigmarket stores around Bangalore so far spread over each nook and corner.
+                        We have {markers.length} bigmarket stores around Bangalore so far spread over each nook and corner.
                     </p>
                 </div>
 
@@ -157,7 +179,7 @@ export default class Stores extends Component {
 
                     </GoogleMapReact>
 
-                    <div class="list-group">
+                    <div className="list-group">
 
                         {/* Marker Right bar */}
 
@@ -167,7 +189,7 @@ export default class Stores extends Component {
 
                         {
                             markers.map((marker, index) => {
-                                return (<a onClick={() => { this.viewMarker(marker, index) }} className={`marker list-group-item list-group-item-action ${marker.expanded ? 'marker-active' : 'marker-inactive'}`} >
+                                return (<a key={index} onClick={() => { this.viewMarker(marker, index) }} className={`marker list-group-item list-group-item-action ${marker.expanded ? 'marker-active' : 'marker-inactive'}`} >
                                     <div class="marker-detail">
                                         <h6 class="mb-1 marker-caption">{marker.caption}</h6>
                                         <small>

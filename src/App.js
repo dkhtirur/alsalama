@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import Header from './components/header/header';
 import logo from './assets/images/logo.png';
@@ -18,13 +18,15 @@ function App() {
     <Router>
       <div className="app">
         <Header />
-
+{/*  */}
         <div className="content">
 
-          <Route exact path="/home" component={Landing} />
+          <Route exact path="/" component={Landing} />
           <Route exact path="/gallery" component={Gallery} />
           <Route path="/stores" component={Stores} />
           <Route path="/contact" component={Contact} />
+
+          {/* <Redirect to="/home" /> */}
 
         </div>
 
@@ -41,13 +43,13 @@ function App() {
           </div>
 
           <div className="right">
-            <address>
+            {/* <address>
               # 26 & 26/2, Near Laxshmi Convention Hall, Sarjapur Main Road , Attibelle, Bengaluru - 562107
 
     Phone: +91-944848777
 
     Email: thebigmarket.bmh@gmail.com
-          </address>
+          </address> */}
           </div>
         </div>
 

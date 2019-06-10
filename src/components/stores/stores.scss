@@ -3,15 +3,26 @@
         display: flex;
 
         .list-group {
+            overflow: hidden;
+
+
+            @media only screen and (max-width: 600px) {
+                flex-basis: 100%;
+            }
+
+
             flex-basis: 20%;
-            flex-basis: 12%;
-            position: absolute;
+            // flex-basis: 12%;
+            // position: absolute;
             // right: 50px;
-            right: 70px;
-            width: 199px;
-            
+            // right: 70px;
+            // width: 199px;
+
+            width: 215px;
             /* top: 100px; */
-            margin-top: 4px;
+            // margin-top: 4px;
+
+            overflow: scroll;
 
             .list-group-item {
                 border: 1px solid rgba(193, 193, 193, 0.125);
@@ -19,6 +30,7 @@
 
                 &.store-heading {
                     padding: 10px 12px;
+
                     h6.marker-heading {
                         margin-bottom: 0px;
                         font-size: 12px;
@@ -32,11 +44,11 @@
                     border: 1px solid rgba(193, 193, 193, 0.125);
 
 
-                  
+
 
                 }
 
-                &.marker-active{
+                &.marker-active {
                     background: aliceblue;
                 }
 
@@ -56,18 +68,25 @@
 }
 
 .marker {
-    &.marker-active{
-        
-    }
+    &.marker-active {}
 
     .marker-info {
         background: white;
-        width: 100px;
-        height: 20px;
+        width: 200px;
+        // height: 20px;
         border-radius: 2px;
+        position: absolute;
+        bottom: 5px;
+        padding: 10px 15px;
+        box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
 
         .marker-caption {
             font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        p.marker-address {
+            margin-bottom: 0px;
         }
     }
 

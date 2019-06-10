@@ -3,11 +3,12 @@
     // justify-content: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+    // align-items: center;
     .content {
         // padding: 10px;
-
-        width: 90%;
+        padding: 10px 6%;
+        // width: 90%;
 
     }
 }
@@ -27,12 +28,14 @@ footer {
                 width: 150px;
             }
         }
+
         .right {
-          width: 30%;
-          address{
-            font-size: 13px;
-            color: #93959f;
-          }
+            width: 30%;
+
+            address {
+                font-size: 13px;
+                color: #93959f;
+            }
         }
     }
 
@@ -52,7 +55,7 @@ footer {
 
     p.page-desc {
         font-size: 13px;
-    color: #93959f;
+        color: #93959f;
 
         // font-size: 20px;
         // text-align: justify;
