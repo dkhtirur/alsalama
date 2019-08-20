@@ -14,36 +14,6 @@ export default class Contact extends Component {
 
     render() {
 
-        const photos = [
-            {
-                src: require('./../../assets/images/shop/fruits.jpeg'),
-                width: 2,
-                height: 3
-            },
-            {
-                src: require('./../../assets/images/shop/twenty.jpeg'),
-                width: 1,
-                height: 1
-            },
-            {
-                src: require('./../../assets/images/shop/two.jpeg'),
-                width: 4,
-                height: 3
-            },
-            {
-                src: require('./../../assets/images/shop/three.jpeg'),
-                width: 4,
-                height: 3
-            },
-
-            {
-                src: require('./../../assets/images/shop/thirteen.jpeg'),
-                width: 1,
-                height: 1
-            },
-
-        ];
-
         return (
             <div className="contact">
                 {/* <div className="page-content">

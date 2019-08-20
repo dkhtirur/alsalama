@@ -62,7 +62,10 @@ export default class Header extends Component {
                     <Navbar color="light" light expand="md">
                         <NavbarBrand href="/">
                             <NavLink to={'/'} strict activeClassName='is-active'>
-                                <img className="logo" src={logo}></img>
+                                {/* <img className="logo" src={logo}></img> */}
+                                <h1>
+                                    Clay Works
+                                </h1>
                             </NavLink>
                         </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} />
