@@ -93,28 +93,43 @@ export default class Landing extends Component {
             <div className="landing">
 
 
-                {/* Brand Landing */}
                 <div className="intro">
+
+                    <div className="first-line">
+                        <h1 className="welcome">Hello there</h1>
+                        {/* <p>
+                            to
+                        </p> */}
+                    </div>
+
+                    <h1 className="second-line">
+                        <TextLoop children={["clay works", "your complete clay solution", "", "everyday store", "everything store"]} />
+                    </h1>
+                </div>
+
+
+                {/* Brand Landing */}
+                {/* <div className="intro">
 
                     <div className="first-line">
                         <h1 className="welcome">
                             Welcome
                         </h1>
                         <p>
-                            to the
+                            to
                         </p>
                     </div>
 
                     <h1 className="second-line">
-                        <TextLoop children={["bigmarket store", "neighbourhood store", "all-in-one store", "everyday store", "everything store"]} />
+                        <TextLoop children={["clay works", "your complete clay solution", "", "everyday store", "everything store"]} />
                     </h1>
-                </div>
+                </div> */}
 
 
                 <div className="top-gallery">
                     {/* Carousel */}
 
-                    <div className="card">
+                    {/* <div className="card">
 
                         <Carousel
                             activeIndex={activeIndex}
@@ -127,7 +142,7 @@ export default class Landing extends Component {
                             <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
                             <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
                         </Carousel>
-                    </div>
+                    </div> */}
 
                     {/* Carousel Ends */}
 
@@ -142,7 +157,11 @@ export default class Landing extends Component {
                     </h1>
 
                     <p className="page-desc">
-                        The Big Market was Established in the Year of 1954 at Bangalore. Since then the growth has been tremendous with a wholehearted support from our beloved Customers who helped us to enter in modern trading in supermarket field in the year of 1994. Our key features are our store Locations at prime areas with the wide range of products from the local market as well as from the international markets. We believe that we could perform and develop only through satisfying thousands of Customers who put their trust in the Best Services we provide. We have been in the market for the past some time and have striving our best to .
+                        Established in 1993 by Athikkal Group , Athikkal Bricks and Clay Works has been serving the people of Kerala with quality bricks . From building Wire Cut Bricks and other Clay Works our team has a proven track record of delivering the products ahead of time . Our traditional state of the art facility can produce upto 10000 bricks a day . The production is environment friendly and runs throughout the year .
+
+    As a leading producer of clay building materials, our goal is to create sustainable values with natural products : a shelter for our customers . Together we strive at supplying outstanding sustainable building material solutions for a better quality of life . Our solutions are highly energy efficient resource efficient that set high industry standards . We commit to continuous improvement to add to the value to the customers .
+
+    First of its kind - For the first time in Kerala
                     </p>
                 </div>
 

@@ -69,34 +69,33 @@ export default class Stores extends Component {
             activeIndex: 0,
             markers: [
                 {
-                    caption: 'JP Nagar',
-                    address: 'Bus Stop, 602, 15th Cross, Outer Ring Rd, Opp, JP Nagar Phase 6, Bengaluru, Karnataka 560078',
+                    caption: 'Clay Works, Edavanna',
+                    address: 'Athikkal Bricks and Clay Works, Edavanna, Malappuram, 676541',
                     lat: 12.906100, lng: 77.580450,
                     zoom: 13
                 },
                 {
-                    caption: 'Sahakara Nagar',
-                    address: '26/1, Ground Floor, G Block, Spoorthi Complex, Sahakara Nagar, Bengaluru',
+                    caption: 'Best Bricks, Nilambur',
+                    address: 'Best Bricks, Nilambur',
                     lat: 13.058840, lng: 77.581070,
                     zoom: 18
 
                 },
                 {
-                    caption: 'JP Nagar',
-                    address: 'No. 78/79, 24TH MAIN Road, NEAR SHOBHA TULIP APT, 5th Phase, J. P. Nagar, Bengaluru, Karnataka 560078',
+                    caption: 'Clay Works, Bangalore',
+                    address: '701, Rahat Bagh, Nagavarpalaya, Bangalore',
                     lat: 12.906100, lng: 77.580450,
                     zoom: 18
 
                 },
                 {
-                    caption: 'Hennur Main Rd',
-                    address: '# 1 & 2, Opp. XLR8, Hennur Main Rd, Kothanur, Bengaluru, Karnataka 560077',
+                    caption: 'Clay Works, Calicut',
+                    address: '3rd Floor, Casamia, Eranhipalam Junction, Calicut',
                     lat: 52.955413, lng: 31.337844
                 },
                 {
-                    caption: 'Bigmarket three',
-                    address: 'Bus Stop, 602, 15th Cross, Outer Ring Rd, Opp, JP Nagar Phase 6, Bengaluru',
-
+                    caption: 'Athikkakl Saw Mills, Caliut',
+                    address: 'Kallai, Calicut',
                     lat: 12.797005, lng: 77.706684
                 }]
         };
@@ -137,12 +136,6 @@ export default class Stores extends Component {
 
         let { markers, activeMarker } = this.state;
 
-        // return (
-        //     <div className="">
-
-        //     </div>
-        // )
-
         return (
             <div className="stores">
                 <div className="page-content">
@@ -151,7 +144,7 @@ export default class Stores extends Component {
                     </h1>
 
                     <p className="page-desc">
-                        We have {markers.length} bigmarket stores around Bangalore so far spread over each nook and corner.
+                        We have our factory located at the heart of Malabar , Edavanna, Malappuram and have stores around the city. We also accept orders from around South India . Please contact our nearest distributors.
                     </p>
                 </div>
 

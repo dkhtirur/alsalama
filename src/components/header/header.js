@@ -43,9 +43,21 @@ export default class Header extends Component {
             caption: 'Home',
             to: '/'
         }, {
+            caption: 'Products',
+            to: '/products'
+        }, {
+            caption: 'Collaborate with Us',
+            to: '/collaborate'
+        }, {
             caption: 'Stores',
             to: '/stores'
-        }, {
+        }, 
+        // {
+        //     caption: 'Pottery Classes',
+        //     to: '/pottery',
+        //     new: true
+        // }, 
+        {
             caption: 'Glimpse',
             to: '/gallery'
         }, {
@@ -62,10 +74,10 @@ export default class Header extends Component {
                     <Navbar color="light" light expand="md">
                         <NavbarBrand href="/">
                             <NavLink to={'/'} strict activeClassName='is-active'>
-                                {/* <img className="logo" src={logo}></img> */}
-                                <h1>
+                                <img className="logo" src={logo}></img>
+                                {/* <h1>
                                     Clay Works
-                                </h1>
+                                </h1> */}
                             </NavLink>
                         </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} />
@@ -77,6 +89,11 @@ export default class Header extends Component {
                                         return (<NavItem>
                                             <NavLink to={link.to} strict activeClassName='is-active'>
                                                 {link.caption}
+
+                                                {
+                                                    link.new ? <span className="new">new</span> : null
+                                                }
+
                                             </NavLink>
                                         </NavItem>)
                                     })
