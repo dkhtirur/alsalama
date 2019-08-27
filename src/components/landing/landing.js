@@ -15,26 +15,36 @@ import InstagramEmbed from 'react-instagram-embed';
 
 const items = [
     {
-        src: require('./../../assets/images/shop/fruits.jpeg'),
+        src: require('./../../assets/images/brickdisplay1.jpg'),
         altText: 'Freshest fruits for your daily life',
         caption: 'Fruits and Vegetables directly from the farms.',
         heading: 'Fresh fruits & vegetables'
     }, {
-        src: require('./../../assets/images/shop/twenty.jpeg'),
+        src: require('./../../assets/images/brickdisplay2.jpg'),
         heading: 'Refreshments',
         caption: 'Our entire bay to store all your favourite refreshments. Have you tried the new Tropicana Orange.',
         // caption: 'Slide 2'
     }, {
-        src: require('./../../assets/images/shop/thirteen.jpeg'),
+        src: require('./../../assets/images/brickdisplay3.jpg'),
         altText: 'Nuts to Coconuts',
         heading: 'Nuts to Coconuts',
         caption: 'We stock all of your grocery needs sourced fresh everyday'
     }, {
-        src: require('./../../assets/images/shop/crockery.jpeg'),
-        altText: 'Crockery',
-        heading: 'All the Crockery',
-        caption: 'We have a seperate section for all the clay, ceramic and brass crockeries'
-    }
+        src: require('./../../assets/images/brickhand1.jpg'),
+        altText: 'Nuts to Coconuts',
+        heading: 'Nuts to Coconuts',
+        caption: 'We stock all of your grocery needs sourced fresh everyday'
+    }, {
+        src: require('./../../assets/images/brickhand2.jpg'),
+        altText: 'Nuts to Coconuts',
+        heading: 'Nuts to Coconuts',
+        caption: 'We stock all of your grocery needs sourced fresh everyday'
+    }, {
+        src: require('./../../assets/images/brickhand3.jpg'),
+        altText: 'Nuts to Coconuts',
+        heading: 'Nuts to Coconuts',
+        caption: 'We stock all of your grocery needs sourced fresh everyday'
+    },
 ];
 
 export default class Landing extends Component {
@@ -129,7 +139,7 @@ export default class Landing extends Component {
                 <div className="top-gallery">
                     {/* Carousel */}
 
-                    {/* <div className="card">
+                    <div className="card">
 
                         <Carousel
                             activeIndex={activeIndex}
@@ -142,7 +152,7 @@ export default class Landing extends Component {
                             <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
                             <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
                         </Carousel>
-                    </div> */}
+                    </div>
 
                     {/* Carousel Ends */}
 
@@ -178,8 +188,11 @@ export default class Landing extends Component {
                         Tune in to get frequent updates on offers and our products.
                     </p>
 
+
+
                     <InstagramEmbed
-                        url='https://www.instagram.com/p/BxH6zM4AGmn/'
+
+                        url='https://www.instagram.com/p/BrA5Vh5lj12/'
                         maxWidth={320}
                         hideCaption={false}
                         containerTagName='div'
