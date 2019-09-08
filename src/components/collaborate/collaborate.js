@@ -18,28 +18,28 @@ export default class Collaborate extends Component {
 
         const photos = [
             {
-                src: require('./../../assets/images/shop/fruits.jpeg'),
+                // src: require('./../../assets/images/shop/fruits.jpeg'),
                 width: 4,
                 height: 3
             },
             {
-                src: require('./../../assets/images/shop/twenty.jpeg'),
+                //src: require('./../../assets/images/shop/twenty.jpeg'),
                 width: 1,
                 height: 1
             },
             {
-                src: require('./../../assets/images/shop/two.jpeg'),
+                //src: require('./../../assets/images/shop/two.jpeg'),
                 width: 4,
                 height: 3
             },
             {
-                src: require('./../../assets/images/shop/three.jpeg'),
+                //src: require('./../../assets/images/shop/three.jpeg'),
                 width: 4,
                 height: 3
             },
 
             {
-                src: require('./../../assets/images/shop/thirteen.jpeg'),
+               // src: require('./../../assets/images/shop/thirteen.jpeg'),
                 width: 1,
                 height: 1
             },
@@ -58,7 +58,7 @@ export default class Collaborate extends Component {
                     </p>
                 </div>
 
-                <Gallery photos={photos} />;
+                {/* <Gallery photos={photos} />; */}
 
             </div>)
     }

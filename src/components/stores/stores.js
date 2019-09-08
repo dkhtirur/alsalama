@@ -63,6 +63,7 @@ class Marker extends Component {
 export default class Stores extends Component {
 
     constructor(props) {
+
         super(props);
 
         this.state = {
