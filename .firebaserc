@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "brew-8bc36"
+    "default": "athikkal-bricks",
+    "master": "athikkal-bricks"
   }
 }

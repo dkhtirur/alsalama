@@ -60,10 +60,11 @@ export default class Header extends Component {
         //     to: '/pottery',
         //     new: true
         // }, 
+        // {
+        //     caption: 'Glimpse',
+        //     to: '/gallery'
+        // }, 
         {
-            caption: 'Glimpse',
-            to: '/gallery'
-        }, {
             caption: 'Contact',
             to: '/contact'
         }];
@@ -77,7 +78,7 @@ export default class Header extends Component {
                     <Navbar color="light" light expand="md">
                         <NavbarBrand href="/">
                             <NavLink to={'/'} strict activeClassName='is-active'>
-                                <img className="logo" src={logo}></img>
+                                <img alt="Athikkal Bricks" className="logo" src={logo}></img>
                                 {/* <h1>
                                     Clay Works
                                 </h1> */}

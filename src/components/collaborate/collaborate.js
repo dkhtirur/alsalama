@@ -54,11 +54,22 @@ export default class Collaborate extends Component {
                     </h1>
 
                     <p className="page-desc">
-                        Our stores are designed for a smooth customer experience . Spacios walkspace area allows for a relaxed shopping experience with your friends and family
+                        We extend hands to collaborate with creative minds ,
                     </p>
                 </div>
 
-                <iframe src="https://docs.google.com/document/d/e/2PACX-1vTFYdjp9BkCbXoAllvv2k_TeJgT755aukRtW3A4t2BADwINcgYpYmB_ABZ8TssNmBaEBIw1L6LlcWob/pub?embedded=true"></iframe>
+                <object
+                    aria-label="PDF for Collaboration"
+                    data={require('./note.pdf')}
+                    type="application/pdf"
+                    width="100%"
+                    height="1200px"
+                />
+                {/* <embed src="./note.pdf" /> */}
+                {/* <embed data={require('./note.pdf')} type="application/pdf" width="100%" height="1200px" /> */}
+
+
+                {/* <iframe src="https://docs.google.com/document/d/e/2PACX-1vTFYdjp9BkCbXoAllvv2k_TeJgT755aukRtW3A4t2BADwINcgYpYmB_ABZ8TssNmBaEBIw1L6LlcWob/pub?embedded=true"></iframe> */}
                 {/* <Gallery photos={photos} />; */}
 
             </div>)

@@ -26,8 +26,7 @@ export default class Contact extends Component {
                     </p>
                 </div> */}
 
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlGLCgUd4SW8Zoj_1mqctTUAEOVQuW2BGe-ibu-dq7nmwefQ/viewform?embedded=true" width="100%" height="930" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfkFWeXk-_6H1_MdupA7OPqXccMqtx1tFCCk_5R5URBKiIgLQ/viewform?embedded=true" width="100%" height="930" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
             </div>)
     }
