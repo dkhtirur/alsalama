@@ -39,7 +39,7 @@ export default class Collaborate extends Component {
             },
 
             {
-               // src: require('./../../assets/images/shop/thirteen.jpeg'),
+                // src: require('./../../assets/images/shop/thirteen.jpeg'),
                 width: 1,
                 height: 1
             },
@@ -50,7 +50,7 @@ export default class Collaborate extends Component {
             <div className="gallery">
                 <div className="page-content">
                     <h1 className="page-heading">
-                        Gallery
+
                     </h1>
 
                     <p className="page-desc">
@@ -58,6 +58,7 @@ export default class Collaborate extends Component {
                     </p>
                 </div>
 
+                <iframe src="https://docs.google.com/document/d/e/2PACX-1vTFYdjp9BkCbXoAllvv2k_TeJgT755aukRtW3A4t2BADwINcgYpYmB_ABZ8TssNmBaEBIw1L6LlcWob/pub?embedded=true"></iframe>
                 {/* <Gallery photos={photos} />; */}
 
             </div>)

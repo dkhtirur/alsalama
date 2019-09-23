@@ -106,38 +106,17 @@ export default class Landing extends Component {
                 <div className="intro">
 
                     <div className="first-line">
-                        <h1 className="welcome">Hello there</h1>
-                        {/* <p>
-                            to
-                        </p> */}
+                        <h1 className="welcome">hello<br /> there</h1>
                     </div>
 
                     <h1 className="second-line">
-                        <TextLoop children={["clay works", "your complete clay solution", "", "everyday store", "everything store"]} />
+                        {/* <TextLoop children={["clay works", "your complete clay solution", "", "everyday store", "everything store"]} /> */}
                     </h1>
                 </div>
 
 
-                {/* Brand Landing */}
-                {/* <div className="intro">
-
-                    <div className="first-line">
-                        <h1 className="welcome">
-                            Welcome
-                        </h1>
-                        <p>
-                            to
-                        </p>
-                    </div>
-
-                    <h1 className="second-line">
-                        <TextLoop children={["clay works", "your complete clay solution", "", "everyday store", "everything store"]} />
-                    </h1>
-                </div> */}
-
-
-                <div className="top-gallery">
-                    {/* Carousel */}
+                {/* <div className="top-gallery">
+                    Carousel
 
                     <div className="card">
 
@@ -154,9 +133,9 @@ export default class Landing extends Component {
                         </Carousel>
                     </div>
 
-                    {/* Carousel Ends */}
+                    Carousel Ends
 
-                </div>
+                </div> */}
 
 
                 {/* About Us Section */}

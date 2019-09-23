@@ -42,16 +42,19 @@ export default class Header extends Component {
         let links = [{
             caption: 'Home',
             to: '/'
-        }, {
-            caption: 'Products',
-            to: '/products'
-        }, {
+        },
+        // {
+        //     caption: 'Products',
+        //     to: '/products'
+        // },
+        {
             caption: 'Collaborate with Us',
             to: '/collaborate'
-        }, {
-            caption: 'Stores',
-            to: '/stores'
-        }, 
+        },
+        // {
+        //     caption: 'Stores',
+        //     to: '/stores'
+        // },
         // {
         //     caption: 'Pottery Classes',
         //     to: '/pottery',

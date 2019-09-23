@@ -1,76 +1,72 @@
 .header {
+  // @media only screen and (max-width: 600px) {
+  //     display: flex;
+  //     justify-content: center;
+  // }
+  // padding: 10px 75px;
 
+  width: 90%;
 
-    // @media only screen and (max-width: 600px) {
-    //     display: flex;
-    //     justify-content: center;
-    // }
-    padding: 10px 20px;
+  // width: 100%;
+  box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
 
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    // width: 90%;
 
+    .navbar {
+      &.bg-light {
+        background-color: white !important;
+        width: 100%;
+      }
 
-    // width: 100%;
-    box-shadow: 0 15px 40px -20px rgba(40, 44, 63, .15);
-
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        // width: 90%;
-
-
-        .navbar {
-            &.bg-light {
-                background-color: white !important;
-                width: 100%;
-            }
-
-            .navbar-brand {
-                img {
-                    width: 100px;
-                }
-            }
-
-            ul.navbar-nav {
-                li {
-                    &.nav-item {
-                        margin: 0px 10px;
-
-                        a {
-                            color: gray;
-                            text-decoration: none;
-                            transition: all 400ms ease-in;
-
-                            &:hover {
-                                font-weight: bold;
-                                color: orange;
-                            }
-
-                            &.is-active {
-                                font-weight: bold;
-                                color: #af2626;
-                            }
-                            span.new{
-                                margin: 0px 3px;
-                                background: linear-gradient(45deg, #bf1616e6, #950000b5);
-                                color: white;
-                                padding: 2px 6px;
-                                border-radius: 3px;
-                            }
-
-                        }
-                    }
-                }
-            }
+      .navbar-brand {
+        img {
+          width: 150px;
         }
+      }
 
-        .left {
-            .logo {
-                width: 180px;
+      ul.navbar-nav {
+        li {
+          &.nav-item {
+            margin: 0px 10px;
+
+            a {
+              color: gray;
+              text-decoration: none;
+              transition: all 400ms ease-in;
+
+              &:hover {
+                font-weight: bold;
+                color: orange;
+              }
+
+              &.is-active {
+                font-weight: bold;
+                color: #af2626;
+              }
+              span.new {
+                margin: 0px 3px;
+                background: linear-gradient(45deg, #bf1616e6, #950000b5);
+                color: white;
+                padding: 2px 6px;
+                border-radius: 3px;
+              }
             }
+          }
         }
-
-        .right {}
+      }
     }
 
+    .left {
+      .logo {
+        width: 180px;
+      }
+    }
+
+    .right {
+    }
+  }
 }
