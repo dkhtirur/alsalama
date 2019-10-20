@@ -16,35 +16,18 @@ export default class Landing extends Component {
 
     render() {
 
-        // const photos = [
-        //     {
-        //         src: require('./../../assets/images/shop/fruits.jpeg'),
-        //         width: 4,
-        //         height: 3
-        //     },
-        //     {
-        //         src: require('./../../assets/images/shop/twenty.jpeg'),
-        //         width: 1,
-        //         height: 1
-        //     },
-        //     {
-        //         src: require('./../../assets/images/shop/two.jpeg'),
-        //         width: 4,
-        //         height: 3
-        //     },
-        //     {
-        //         src: require('./../../assets/images/shop/three.jpeg'),
-        //         width: 4,
-        //         height: 3
-        //     },
+        const products = [{
+            name: 'Wire Cut Clay Brick',
+            image: require('./../../assets/images/brickhand1.jpg'),
+            dimensions: '8.5 * 4 * 3 inches',
+            cost: 'Rs 16 per piece'
 
-        //     {
-        //         src: require('./../../assets/images/shop/thirteen.jpeg'),
-        //         width: 1,
-        //         height: 1
-        //     },
-
-        // ];
+        }, {
+            name: 'Wire Cut Clay Brick (First)',
+            image: require('./../../assets/images/bricks.jpg'),
+            dimensions: '8.5 * 4 * 3 inches',
+            cost: 'Rs 13 per piece'
+        }]
 
         return (
             <div className="gallery">
@@ -54,9 +37,40 @@ export default class Landing extends Component {
                     </h1>
 
                     <p className="page-desc">
-                        Primarily in the field 
-                        Our stores are designed for a smooth customer experience . Spacios walkspace area allows for a relaxed shopping experience with your friends and family
+                        In the field of traditional clay bricks , the team carries two decades of experience moulding quality bricks that lasts a history. Upon advance payment we help in the delivery of the products at any
+                        required location.
                     </p>
+                </div>
+
+
+                {/* Product list */}
+                <div className="product-list">
+
+                    {
+                        products.map((product) => {
+
+                            return (<div className="product">
+                                <img alt="bricks in kerala ,products of clay works" className="product-image" src={product.image} />
+                                <div>
+                                    <h3 className="product-name">
+                                        {product.name}
+                                    </h3>
+                                    <p className="product-desc">
+                                        {product.dimensions}
+                                    </p>
+                                    <p className="product-price">
+                                        <strong>
+                                            {product.cost}
+                                        </strong>
+                                    </p>
+                                </div>
+                            </div>);
+
+
+                        })
+                    }
+
+
                 </div>
 
                 {/* <Gallery photos={photos} />; */}

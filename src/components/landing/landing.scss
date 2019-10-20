@@ -6,9 +6,9 @@
   .intro {
     margin: 50px 0px;
     height: 600px;
-    background: url("./../../assets/images/bg-two.jpg") center center no-repeat fixed;
+    background: url("./../../assets/images/bg-two.jpg") center center no-repeat
+      fixed;
     background-size: cover;
-
     .first-line {
       display: flex;
       align-items: baseline;
@@ -20,11 +20,21 @@
     }
 
     .welcome {
-      margin: 50px;
-      font-size: 200px;
+      margin: 20px;
+
       //   color: #463737;
       color: white;
       font-weight: 100;
+      font-size: 100px;
+
+      @media only screen and (min-width: 400px) {
+        margin: 50px;
+
+        font-size: 140px;
+      }
+      @media only screen and (min-width: 600px) {
+        font-size: 200px;
+      }
     }
 
     @media only screen and (min-width: 600px) {

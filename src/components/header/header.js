@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import './header.scss';
-import logo from './../../assets/images/logo.png';
+import "./header.scss";
+import logo from "./../../assets/images/logo.png";
 import {
     Collapse,
     Navbar,
@@ -14,12 +14,15 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem
-} from 'reactstrap';
-import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
-
+} from "reactstrap";
+import {
+    BrowserRouter as Router,
+    Route,
+    Link,
+    NavLink
+} from "react-router-dom";
 
 export default class Header extends Component {
-
     constructor(props) {
         super(props);
 
@@ -33,52 +36,59 @@ export default class Header extends Component {
         this.setState({
             collapsed: !this.state.collapsed
         });
-    }
+    };
 
     render() {
-
         const { collapsed } = this.state;
 
-        let links = [{
-            caption: 'Home',
-            to: '/'
-        },
-        // {
-        //     caption: 'Products',
-        //     to: '/products'
-        // },
-        {
-            caption: 'Collaborate with Us',
-            to: '/collaborate'
-        },
-        // {
-        //     caption: 'Stores',
-        //     to: '/stores'
-        // },
-        // {
-        //     caption: 'Pottery Classes',
-        //     to: '/pottery',
-        //     new: true
-        // }, 
-        // {
-        //     caption: 'Glimpse',
-        //     to: '/gallery'
-        // }, 
-        {
-            caption: 'Contact',
-            to: '/contact'
-        }];
-
+        let links = [
+            {
+                caption: "Home",
+                to: "/"
+            },
+            {
+                caption: "Products",
+                to: "/products"
+            },
+            {
+                caption: "Collaborate with Us",
+                to: "/collaborate"
+            },
+            // {
+            //     caption: 'Stores',
+            //     to: '/stores'
+            // },
+            // {
+            //     caption: 'Pottery Classes',
+            //     to: '/pottery',
+            //     new: true
+            // },
+            // {
+            //     caption: 'Glimpse',
+            //     to: '/gallery'
+            // },
+            {
+                caption: "Contact",
+                to: "/contact"
+            }
+        ];
 
         return (
-            <div className="header" >
+            <div className="header">
                 {/* Header Content */}
-                <div className="header-content" >
-
+                <div className="header-content">
                     <Navbar color="light" light expand="md">
                         <NavbarBrand href="/">
-                            <NavLink to={'/'} strict activeClassName='is-active'>
-                                <img alt="Athikkal Bricks" className="logo" src={logo}></img>
+                            <NavLink
+                                to={"/"}
+                                strict
+                                activeClassName="is-active"
+                            >
+                                <img
+                                    alt="Athikkal Bricks"
+                                    className="logo"
+                                    src={logo}
+                                ></img>
                                 {/* <h1>
                                     Clay Works
                                 </h1> */}
@@ -87,30 +97,38 @@ export default class Header extends Component {
                         <NavbarToggler onClick={this.toggleNavbar} />
                         <Collapse isOpen={collapsed} navbar>
                             <Nav className="ml-auto" navbar>
+                                {links.map(link => {
+                                    return (
+                                        <NavItem>
+                                            <NavLink
+                                                onClick={() => {
+                                                    console.log("s");
 
-                                {
-                                    links.map((link) => {
-                                        return (<NavItem>
-                                            <NavLink to={link.to} strict activeClassName='is-active'>
+                                                    this.setState({
+                                                        collapsed: false
+                                                    });
+                                                }}
+                                                to={link.to}
+                                                strict
+                                                activeClassName="is-active"
+                                            >
                                                 {link.caption}
 
-                                                {
-                                                    link.new ? <span className="new">new</span> : null
-                                                }
-
+                                                {link.new ? (
+                                                    <span className="new">
+                                                        new
+													</span>
+                                                ) : null}
                                             </NavLink>
-                                        </NavItem>)
-                                    })
-                                }
+                                        </NavItem>
+                                    );
+                                })}
                             </Nav>
                         </Collapse>
                     </Navbar>
-
                 </div>
                 {/* Header Content Ends */}
-            </div >
+            </div>
         );
-
     }
-
 }

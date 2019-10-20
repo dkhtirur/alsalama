@@ -1,20 +1,19 @@
-import React from 'react';
+import React from "react";
 
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
-import Header from './components/header/header';
-import logo from './assets/images/logo.png';
+import Header from "./components/header/header";
+import logo from "./assets/images/logo.png";
 
-import Landing from './components/landing/landing';
-import Products from './components/products/products';
-import Pottery from './components/pottery/pottery';
-import Collaborate from './components/collaborate/collaborate';
-import Gallery from './components/gallery/gallery';
-import Stores from './components/stores/stores';
-import Contact from './components/contact/contact';
+import Landing from "./components/landing/landing";
+import Products from "./components/products/products";
+import Pottery from "./components/pottery/pottery";
+import Collaborate from "./components/collaborate/collaborate";
+import Gallery from "./components/gallery/gallery";
+import Stores from "./components/stores/stores";
+import Contact from "./components/contact/contact";
 
-
-import './App.scss';
+import "./App.scss";
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
         <Header />
         {/*  */}
         <div className="content">
-
           <Route exact path="/" component={Landing} />
           <Route exact path="/products" component={Products} />
           <Route exact path="/pottery" component={Pottery} />
@@ -35,19 +33,14 @@ function App() {
           <Route path="/contact" component={Contact} />
 
           {/* <Redirect to="/home" /> */}
-
         </div>
-
-
-
       </div>
 
       <footer>
         <div className="footer-content">
           <div className="left">
             {/* <img className="mb-2" src={logo} alt="" /> */}
-            <small className="d-block mb-3 text-muted">© 2017-2019</small>
-
+            <small className="d-block mb-3 text-muted">© 1993-2019</small>
           </div>
           {/* 
           <div className="right">
@@ -60,34 +53,23 @@ function App() {
           </address>
           </div> */}
         </div>
-
-
-
-
       </footer>
 
-
-
       <div className="footer-end">
-
         <div className="content flex-80" flex="80">
           <p className="md-caption">
-            Got any questions send us an <a href="mailto:ashique181@hotmail.com">
-              email
-      </a>
+            Got any questions send us an{" "}
+            <a href="mailto:ashique181@hotmail.com">email</a>
           </p>
           <div className="social">
-            <h4 className="md-subhead">
-              Call +91 7899205111
-      </h4>
+            <h4 className="md-subhead">Call +91 7899205111</h4>
           </div>
-          <p className="md-body-1">
-            Copyright © 2019, Athikkal Bricks and Clay Works. Since 1993,  All rights reserved.
-    </p>
+          <p className="copyright">
+            Copyright © 2019, Athikkal Bricks and Clay Works. Since 1993, All
+            rights reserved.
+          </p>
         </div>
-
       </div>
-
     </Router>
   );
 }
