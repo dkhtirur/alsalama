@@ -4,6 +4,13 @@ import React, { Component } from "react";
 import './products.scss';
 
 import Gallery from 'react-photo-gallery';
+import {
+    Carousel,
+    CarouselItem,
+    CarouselControl,
+    CarouselIndicators,
+    CarouselCaption
+} from 'reactstrap';
 
 export default class Landing extends Component {
 
@@ -27,7 +34,19 @@ export default class Landing extends Component {
             image: require('./../../assets/images/bricks.jpg'),
             dimensions: '8.5 * 4 * 3 inches',
             cost: 'Rs 13 per piece'
-        }]
+        }, {
+            name: 'Hurudees',
+            image: require('./../../assets/images/products/hurudees.jpeg'),
+            dimensions: '2ft long',
+            cost: 'Rs 80 per piece'
+        },
+        {
+            name: 'Roofing Tile (Clay)',
+            image: require('./../../assets/images/products/tile.jpeg'),
+            // dimensions: '2ft long',
+            cost: 'Rs 28 per piece'
+        }
+        ]
 
         return (
             <div className="gallery">

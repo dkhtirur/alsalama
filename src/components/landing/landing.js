@@ -23,7 +23,6 @@ const items = [
         src: require('./../../assets/images/brickdisplay2.jpg'),
         heading: 'Refreshments',
         caption: 'Our entire bay to store all your favourite refreshments. Have you tried the new Tropicana Orange.',
-        // caption: 'Slide 2'
     }, {
         src: require('./../../assets/images/brickdisplay3.jpg'),
         altText: 'Nuts to Coconuts',
@@ -136,6 +135,33 @@ export default class Landing extends Component {
                     Carousel Ends
 
                 </div> */}
+
+
+                {/* What we Sell */}
+
+                <div className="page-content">
+
+                    <h1 className="page-heading we-sell">
+                        We Sell
+                    </h1>
+
+                    <h1 className="page-tagline">
+                        <span>Clay Bricks</span>
+                        <span>Clay Tiles</span>
+                        <span>Flooring Tiles</span>
+                        <span>Hurudees</span>
+
+                        <span>&</span>
+
+                        <span>lot more</span>
+
+                    </h1>
+
+
+                </div>
+
+
+                {/* What we Sell Ends */}
 
 
                 {/* About Us Section */}
