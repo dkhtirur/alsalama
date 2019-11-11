@@ -3,15 +3,7 @@ import React, { Component } from "react";
 
 import './products.scss';
 
-import Gallery from 'react-photo-gallery';
-import {
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption
-} from 'reactstrap';
-
+// r
 export default class Landing extends Component {
 
     constructor(props) {

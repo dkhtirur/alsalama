@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import {
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption
-} from 'reactstrap';
-import TextLoop from "react-text-loop";
+// import {
+//     CarouselItem,
+//     CarouselCaption
+// } from 'reactstrap';
+// import TextLoop from "react-text-loop";
 
 import './landing.scss';
 
@@ -83,20 +80,20 @@ export default class Landing extends Component {
 
     render() {
 
-        const slides = items.map((item) => {
-            return (
-                <CarouselItem
-                    onExiting={this.onExiting}
-                    onExited={this.onExited}
-                    key={item.src}>
-                    <img src={item.src} alt={item.altText} />
-                    <CarouselCaption captionText={item.caption} captionHeader={item.heading} />
+        // const slides = items.map((item) => {
+        //     return (
+        //         <CarouselItem
+        //             onExiting={this.onExiting}
+        //             onExited={this.onExited}
+        //             key={item.src}>
+        //             <img src={item.src} alt={item.altText} />
+        //             <CarouselCaption captionText={item.caption} captionHeader={item.heading} />
 
-                </CarouselItem>
-            );
-        });
+        //         </CarouselItem>
+        //     );
+        // });
 
-        const { activeIndex } = this.state;
+        // const { activeIndex } = this.state;
 
         return (
             <div className="landing">
@@ -222,7 +219,10 @@ export default class Landing extends Component {
 
                 {/* Overlay Cards Ends */}
 
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfkFWeXk-_6H1_MdupA7OPqXccMqtx1tFCCk_5R5URBKiIgLQ/viewform?embedded=true" width="100%" height="930" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe 
+                title='google form'
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfkFWeXk-_6H1_MdupA7OPqXccMqtx1tFCCk_5R5URBKiIgLQ/viewform?embedded=true" 
+                width="100%" height="930" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
 
 
             </div>)

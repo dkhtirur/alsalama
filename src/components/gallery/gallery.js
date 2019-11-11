@@ -10,7 +10,7 @@ import {
     CarouselCaption
 } from 'reactstrap';
 
-import Gallery from 'react-photo-gallery';
+// import Gallery from 'react-photo-gallery';
 
 
 const items = [

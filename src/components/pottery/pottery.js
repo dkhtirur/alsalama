@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 import './pottery.scss';
 
-import Gallery from 'react-photo-gallery';
+// import Gallery from 'react-photo-gallery';
 
 export default class Pottery extends Component {
 

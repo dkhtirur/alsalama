@@ -6,19 +6,11 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     // NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
 } from "reactstrap";
 import {
-    BrowserRouter as Router,
-    Route,
-    Link,
     NavLink
 } from "react-router-dom";
 
@@ -78,7 +70,7 @@ export default class Header extends Component {
                 {/* Header Content */}
                 <div className="header-content">
                     <Navbar color="light" light expand="md">
-                        <NavbarBrand href="/">
+                        {/* <NavbarBrand href="/"> */}
                             <NavLink
                                 to={"/"}
                                 strict
@@ -89,17 +81,14 @@ export default class Header extends Component {
                                     className="logo"
                                     src={logo}
                                 ></img>
-                                {/* <h1>
-                                    Clay Works
-                                </h1> */}
                             </NavLink>
-                        </NavbarBrand>
+                        {/* </NavbarBrand> */}
                         <NavbarToggler onClick={this.toggleNavbar} />
                         <Collapse isOpen={collapsed} navbar>
                             <Nav className="ml-auto" navbar>
-                                {links.map(link => {
+                                {links.map((link, key) => {
                                     return (
-                                        <NavItem>
+                                        <NavItem key={key}>
                                             <NavLink
                                                 onClick={() => {
                                                     console.log("s");

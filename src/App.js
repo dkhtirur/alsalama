@@ -1,9 +1,9 @@
 import React from "react";
 
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Header from "./components/header/header";
-import logo from "./assets/images/logo.png";
+// import logo from "./assets/images/logo.png";
 
 import Landing from "./components/landing/landing";
 import Products from "./components/products/products";

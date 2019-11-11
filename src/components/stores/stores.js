@@ -31,7 +31,7 @@ class Marker extends Component {
         let { marker } = this.state;
 
         let m = require('./../../assets/images/marker.png');
-        let mActive = require('./../../assets/images/marker-active.png');
+        // let mActive = require('./../../assets/images/marker-active.png');
 
 
         // console.log(this.props.hover);
@@ -52,7 +52,7 @@ class Marker extends Component {
                     </small>
                 </div>
 
-                <img className="location" src={m}></img>
+                <img alt='location' className="location" src={m}></img>
 
             </div >
         );
@@ -68,37 +68,37 @@ export default class Stores extends Component {
 
         this.state = {
             activeIndex: 0,
-            markers: [
-                {
-                    caption: 'Clay Works, Edavanna',
-                    address: 'Athikkal Bricks and Clay Works, Edavanna, Malappuram, 676541',
-                    lat: 12.906100, lng: 77.580450,
-                    zoom: 13
-                },
-                {
-                    caption: 'Best Bricks, Nilambur',
-                    address: 'Best Bricks, Nilambur',
-                    lat: 13.058840, lng: 77.581070,
-                    zoom: 18
+            // markers: [
+            //     {
+            //         caption: 'Clay Works, Edavanna',
+            //         address: 'Athikkal Bricks and Clay Works, Edavanna, Malappuram, 676541',
+            //         lat: 12.906100, lng: 77.580450,
+            //         zoom: 13
+            //     },
+            //     {
+            //         caption: 'Best Bricks, Nilambur',
+            //         address: 'Best Bricks, Nilambur',
+            //         lat: 13.058840, lng: 77.581070,
+            //         zoom: 18
 
-                },
-                {
-                    caption: 'Clay Works, Bangalore',
-                    address: '701, Rahat Bagh, Nagavarpalaya, Bangalore',
-                    lat: 12.906100, lng: 77.580450,
-                    zoom: 18
+            //     },
+            //     {
+            //         caption: 'Clay Works, Bangalore',
+            //         address: '701, Rahat Bagh, Nagavarpalaya, Bangalore',
+            //         lat: 12.906100, lng: 77.580450,
+            //         zoom: 18
 
-                },
-                {
-                    caption: 'Clay Works, Calicut',
-                    address: '3rd Floor, Casamia, Eranhipalam Junction, Calicut',
-                    lat: 52.955413, lng: 31.337844
-                },
-                {
-                    caption: 'Athikkakl Saw Mills, Caliut',
-                    address: 'Kallai, Calicut',
-                    lat: 12.797005, lng: 77.706684
-                }]
+            //     },
+            //     {
+            //         caption: 'Clay Works, Calicut',
+            //         address: '3rd Floor, Casamia, Eranhipalam Junction, Calicut',
+            //         lat: 52.955413, lng: 31.337844
+            //     },
+            //     {
+            //         caption: 'Athikkakl Saw Mills, Caliut',
+            //         address: 'Kallai, Calicut',
+            //         lat: 12.797005, lng: 77.706684
+            //     }]
         };
     }
 
@@ -106,7 +106,7 @@ export default class Stores extends Component {
         // this.setState({})
 
         // Show the first marker with default zoom
-        const { markers } = this.state;
+        // const { markers } = this.state;
         // this.viewMarker(markers, 0);
     }
 
@@ -183,7 +183,7 @@ export default class Stores extends Component {
 
                         {
                             markers.map((marker, index) => {
-                                return (<a key={index} onClick={() => { this.viewMarker(marker, index) }} className={`marker list-group-item list-group-item-action ${marker.expanded ? 'marker-active' : 'marker-inactive'}`} >
+                                return (<div key={index} onClick={() => { this.viewMarker(marker, index) }} className={`marker list-group-item list-group-item-action ${marker.expanded ? 'marker-active' : 'marker-inactive'}`} >
                                     <div class="marker-detail">
                                         <h6 class="mb-1 marker-caption">{marker.caption}</h6>
                                         <small>
@@ -193,7 +193,7 @@ export default class Stores extends Component {
                                     </div>
                                     {/* <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> */}
                                     {/* <small>Donec id elit non mi porta.</small> */}
-                                </a>)
+                                </div>)
                             })
                         }
                     </div>
