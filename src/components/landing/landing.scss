@@ -4,8 +4,12 @@
 	margin-top: 20px;
 
 	.intro {
-		margin: 50px 0px;
-		height: 600px;
+		@media only screen and (min-width: 600px) {
+			margin: 50px 0px;
+
+			height: 600px;
+		}
+
 		background: url("./../../assets/images/bg-two.jpg") center center
 			no-repeat fixed;
 		background-size: cover;
@@ -27,7 +31,7 @@
 			font-weight: 100;
 			font-size: 100px;
 
-			@media only screen and (min-width: 400px) {
+			@media only screen and (min-width: 600px) {
 				margin: 50px;
 
 				font-size: 140px;
@@ -49,26 +53,48 @@
 		}
 	}
 
-	$colors: red, orange, yellow, green, blue, purple;
+	$colors: #2979cc, orange, #ca472a, green, black, orange;
 	$repeat: 20; // How often you want the pattern to repeat.
 	// Warning: a higher number outputs more CSS.
 
 	.we-sell {
 		font-size: 61px;
 		text-transform: lowercase;
-		color: #e2aa00 !important;
+		// color: #e2aa00 !important;
 	}
 	.page-tagline {
-		font-size: 90px;
+		@media only screen and (min-width: 600px) {
+			// margin: 50px;
+			font-size: 90px;
+
+			// font-size: 140px;
+		}
+
 		span {
 			margin: 0px 6px;
 			@for $i from 1 through $repeat {
+				$color: nth($colors, random(length($colors)));
+
 				&:nth-child(#{length($colors)}n + #{$i}) {
-					background: lighten(
-						nth($colors, random(length($colors))),
-						20%
-					);
+					// return
+					// {
+					background: lighten($color, 20%);
+					// }
+
+					color: $color;
+					// color:color;
 				}
+			}
+		}
+	}
+
+	// Css for Products on landing
+	.products {
+		.product-list {
+			justify-content: space-between;
+
+			.product {
+				width: 46%;
 			}
 		}
 	}

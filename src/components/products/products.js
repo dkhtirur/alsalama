@@ -1,6 +1,8 @@
 
 import React, { Component } from "react";
 
+import ProductList from './../../resources/common/product-list/product-list';
+
 import './products.scss';
 
 // r
@@ -37,8 +39,7 @@ export default class Landing extends Component {
             image: require('./../../assets/images/products/tile.jpeg'),
             // dimensions: '2ft long',
             cost: 'Rs 28 per piece'
-        }
-        ]
+        }]
 
         return (
             <div className="gallery">
@@ -55,34 +56,7 @@ export default class Landing extends Component {
 
 
                 {/* Product list */}
-                <div className="product-list">
-
-                    {
-                        products.map((product) => {
-
-                            return (<div className="product">
-                                <img alt="bricks in kerala ,products of clay works" className="product-image" src={product.image} />
-                                <div>
-                                    <h3 className="product-name">
-                                        {product.name}
-                                    </h3>
-                                    <p className="product-desc">
-                                        {product.dimensions}
-                                    </p>
-                                    <p className="product-price">
-                                        <strong>
-                                            {product.cost}
-                                        </strong>
-                                    </p>
-                                </div>
-                            </div>);
-
-
-                        })
-                    }
-
-
-                </div>
+                <ProductList products={products} />
 
                 {/* <Gallery photos={photos} />; */}
 

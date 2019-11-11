@@ -1,23 +1,52 @@
 import React, { Component } from "react";
-// import {
-//     CarouselItem,
-//     CarouselCaption
-// } from 'reactstrap';
+import {
+    Carousel,
+    CarouselItem,
+    CarouselIndicators,
+    CarouselControl,
+    CarouselCaption
+} from 'reactstrap';
 // import TextLoop from "react-text-loop";
+
+import ProductList from './../../resources/common/product-list/product-list';
 
 import './landing.scss';
 
 import InstagramEmbed from 'react-instagram-embed';
 
+const products = [{
+    name: 'Wire Cut Clay Brick',
+    image: require('./../../assets/images/brickhand1.jpg'),
+    dimensions: '8.5 * 4 * 3 inches',
+    cost: 'Rs 16 per piece'
+
+}, {
+    name: 'Wire Cut Clay Brick (First)',
+    image: require('./../../assets/images/bricks.jpg'),
+    dimensions: '8.5 * 4 * 3 inches',
+    cost: 'Rs 13 per piece'
+}, {
+    name: 'Hurudees',
+    image: require('./../../assets/images/products/hurudees.jpeg'),
+    dimensions: '2ft long',
+    cost: 'Rs 80 per piece'
+},
+{
+    name: 'Roofing Tile (Clay)',
+    image: require('./../../assets/images/products/tile.jpeg'),
+    // dimensions: '2ft long',
+    cost: 'Rs 28 per piece'
+}]
+
 
 const items = [
     {
-        src: require('./../../assets/images/brickdisplay1.jpg'),
+        src: require('./../../assets/images/glimpse/hall.jpg'),
         altText: 'Freshest fruits for your daily life',
         caption: 'Fruits and Vegetables directly from the farms.',
         heading: 'Fresh fruits & vegetables'
     }, {
-        src: require('./../../assets/images/brickdisplay2.jpg'),
+        src: require('./../../assets/images/glimpse/passage.jpg'),
         heading: 'Refreshments',
         caption: 'Our entire bay to store all your favourite refreshments. Have you tried the new Tropicana Orange.',
     }, {
@@ -26,12 +55,12 @@ const items = [
         heading: 'Nuts to Coconuts',
         caption: 'We stock all of your grocery needs sourced fresh everyday'
     }, {
-        src: require('./../../assets/images/brickhand1.jpg'),
+        src: require('./../../assets/images/glimpse/pathway.jpg'),
         altText: 'Nuts to Coconuts',
         heading: 'Nuts to Coconuts',
         caption: 'We stock all of your grocery needs sourced fresh everyday'
     }, {
-        src: require('./../../assets/images/brickhand2.jpg'),
+        src: require('./../../assets/images/glimpse/walk.jpg'),
         altText: 'Nuts to Coconuts',
         heading: 'Nuts to Coconuts',
         caption: 'We stock all of your grocery needs sourced fresh everyday'
@@ -80,20 +109,21 @@ export default class Landing extends Component {
 
     render() {
 
-        // const slides = items.map((item) => {
-        //     return (
-        //         <CarouselItem
-        //             onExiting={this.onExiting}
-        //             onExited={this.onExited}
-        //             key={item.src}>
-        //             <img src={item.src} alt={item.altText} />
-        //             <CarouselCaption captionText={item.caption} captionHeader={item.heading} />
+        const slides = items.map((item) => {
+            return (
+                <CarouselItem
+                    onExiting={this.onExiting}
+                    onExited={this.onExited}
+                    key={item.src}>
+                    <img src={item.src} alt={item.altText} />
 
-        //         </CarouselItem>
-        //     );
-        // });
+                    <CarouselCaption captionText={item.caption} captionHeader={item.heading} />
 
-        // const { activeIndex } = this.state;
+                </CarouselItem>
+            );
+        });
+
+        const { activeIndex } = this.state;
 
         return (
             <div className="landing">
@@ -111,54 +141,8 @@ export default class Landing extends Component {
                 </div>
 
 
-                {/* <div className="top-gallery">
-                    Carousel
-
-                    <div className="card">
-
-                        <Carousel
-                            activeIndex={activeIndex}
-                            next={this.next}
-                            previous={this.previous}>
-
-                            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-                            {slides}
-
-                            <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-                            <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-                        </Carousel>
-                    </div>
-
-                    Carousel Ends
-
-                </div> */}
 
 
-                {/* What we Sell */}
-
-                <div className="page-content">
-
-                    <h1 className="page-heading we-sell">
-                        We Sell
-                    </h1>
-
-                    <h1 className="page-tagline">
-                        <span>Clay Bricks</span>
-                        <span>Clay Tiles</span>
-                        <span>Flooring Tiles</span>
-                        <span>Hurudees</span>
-
-                        <span>&</span>
-
-                        <span>lot more</span>
-
-                    </h1>
-
-
-                </div>
-
-
-                {/* What we Sell Ends */}
 
 
                 {/* About Us Section */}
@@ -179,6 +163,72 @@ export default class Landing extends Component {
 
                 {/* About Us Section Ends */}
 
+
+                {/* What we Sell */}
+
+                <div className="page-content products">
+
+                    <h1 className="page-heading we-sell">
+                        Products
+                    </h1>
+
+                    <h1 className="page-tagline">
+                        <span>Clay Bricks</span>
+                        <span>Clay Tiles</span>
+                        <span>Flooring Tiles</span>
+                        <span>Hurudees</span>
+
+                        <span>&</span>
+
+                        <span>lot more</span>
+
+                    </h1>
+
+                    <ProductList products={products} />
+
+                </div>
+
+
+                {/* What we Sell Ends */}
+
+
+                {/* Take A Glimpse */}
+
+                <div className="page-content glimpse">
+
+                    <h1 className="page-heading we-sell">
+                        Know Us
+                    </h1>
+
+                    <p className="page-desc">
+                        Undestand us a little more by having a glimpse of how we master the art of brick making
+                    </p>
+
+
+                    <div className="top-gallery">
+
+                        <div className="card">
+                            <Carousel
+                                activeIndex={activeIndex}
+                                next={this.next}
+                                previous={this.previous}>
+
+                                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+
+                                {slides}
+
+                                <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+                                <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+                            </Carousel>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                {/* Take A Glimpse Ends */}
 
                 <div className="follow-us page-content">
 
@@ -219,10 +269,10 @@ export default class Landing extends Component {
 
                 {/* Overlay Cards Ends */}
 
-                <iframe 
-                title='google form'
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfkFWeXk-_6H1_MdupA7OPqXccMqtx1tFCCk_5R5URBKiIgLQ/viewform?embedded=true" 
-                width="100%" height="930" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
+                <iframe
+                    title='google form'
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfkFWeXk-_6H1_MdupA7OPqXccMqtx1tFCCk_5R5URBKiIgLQ/viewform?embedded=true"
+                    width="100%" height="930" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
 
 
             </div>)
