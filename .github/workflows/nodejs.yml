@@ -24,3 +24,5 @@ jobs:
         npm test
       env:
         CI: true
+    - name: Firebase Deploy
+      uses: jakejarvis/firebase-deploy-action@v0.1.0
