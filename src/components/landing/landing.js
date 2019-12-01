@@ -149,7 +149,7 @@ export default class Landing extends Component {
                 <div className="about-us page-content">
 
                     <h1 className="page-heading">
-                        About Us
+                        About
                     </h1>
 
                     <p className="page-desc">
