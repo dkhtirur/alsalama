@@ -24,5 +24,10 @@ jobs:
         npm test
       env:
         CI: true
-    - name: Firebase Deploy
-      uses: jakejarvis/firebase-deploy-action@v0.1.0
+    - name: GitHub Action for Firebase
+      uses: w9jds/firebase-action@v1.1.0
+      with:
+          args: deploy --only hosting:prod
+      env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
