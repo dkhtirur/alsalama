@@ -1,4 +1,6 @@
-clay works is a portal for selling contruction materials . Now showcasing the products of the factory , is trying to increase the production line and bring more varieties to the platform . 
+## ClayWorks
+
+Clay Works is a portal for selling contruction materials . Now showcasing the products of the factory , is trying to increase the production line and bring more varieties to the platform . 
 
 The final product being a product listing page with categories , we keep adding features to the current setup keeping in mind any feature that is added will add to the final product . 
 
