@@ -6,7 +6,7 @@ import ProductList from './../../resources/common/product-list/product-list';
 import './products.scss';
 
 // r
-export default class Landing extends Component {
+export default class Products extends Component {
 
     constructor(props) {
         super(props);

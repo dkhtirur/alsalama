@@ -88,15 +88,22 @@
 		}
 	}
 
+
+	.product-list {
+		justify-content: space-between;
+
+		margin-bottom: 100px;
+
+
+		
+		.product {
+			width: 46%;
+		}
+	}
+
 	// Css for Products on landing
 	.products {
-		.product-list {
-			justify-content: space-between;
-
-			.product {
-				width: 46%;
-			}
-		}
+	
 	}
 
 	.top-gallery {

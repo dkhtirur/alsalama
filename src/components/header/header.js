@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 
 import "./header.scss";
-import logo from "./../../assets/images/logo.png";
+
+import logo from "./../../assets/images/header-logo.png";
+
+
 import {
     Collapse,
     Navbar,
@@ -71,17 +74,17 @@ export default class Header extends Component {
                 <div className="header-content">
                     <Navbar color="light" light expand="md">
                         {/* <NavbarBrand href="/"> */}
-                            <NavLink
-                                to={"/"}
-                                strict
-                                activeClassName="is-active"
-                            >
-                                <img
-                                    alt="Athikkal Bricks"
-                                    className="logo"
-                                    src={logo}
-                                ></img>
-                            </NavLink>
+                        <NavLink
+                            to={"/"}
+                            strict
+                            activeClassName="is-active"
+                        >
+                            <img
+                                alt="Athikkal Bricks"
+                                className="logo"
+                                src={logo}
+                            ></img>
+                        </NavLink>
                         {/* </NavbarBrand> */}
                         <NavbarToggler onClick={this.toggleNavbar} />
                         <Collapse isOpen={collapsed} navbar>

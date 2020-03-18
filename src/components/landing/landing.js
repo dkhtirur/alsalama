@@ -128,20 +128,12 @@ export default class Landing extends Component {
         return (
             <div className="landing">
 
-
-                <div className="intro">
-
-                    <div className="first-line">
-                        <h1 className="welcome">hello<br /> there</h1>
-                    </div>
-
-                    <h1 className="second-line">
-                        {/* <TextLoop children={["clay works", "your complete clay solution", "", "everyday store", "everything store"]} /> */}
-                    </h1>
-                </div>
+                {/* Tabs for Categories or  */}
 
 
-
+                {/* Product list */}
+                <ProductList products={products} />
+                {/* Product list ends*/}
 
 
 
@@ -159,9 +151,33 @@ export default class Landing extends Component {
 
     First of its kind - For the first time in Kerala
                     </p>
+
+
+
+
+                    <div className="intro">
+
+                        {/* <div className="first-line">
+    <h1 className="welcome">hello<br /> there</h1>
+</div> */}
+
+                        <h1 className="second-line">
+                            {/* <TextLoop children={["clay works", "your complete clay solution", "", "everyday store", "everything store"]} /> */}
+                        </h1>
+                    </div>
+
+
                 </div>
 
                 {/* About Us Section Ends */}
+
+
+
+
+
+
+
+
 
 
                 {/* What we Sell */}
@@ -184,7 +200,7 @@ export default class Landing extends Component {
 
                     </h1>
 
-                    <ProductList products={products} />
+
 
                 </div>
 

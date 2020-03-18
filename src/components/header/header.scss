@@ -23,9 +23,13 @@
       }
 
       // .navbar {
-        img {
-          width: 150px;
+      img {
+        width: 150px;
+
+        @media only screen and (max-width: 600px) {
+          width: 260px;
         }
+      }
       // }
 
       ul.navbar-nav {
