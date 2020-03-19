@@ -1,140 +1,137 @@
 .landing {
-	// display: flex;
+  // display: flex;
 
-	margin-top: 20px;
+  margin-top: 20px;
 
-	.intro {
-		@media only screen and (min-width: 600px) {
-			margin: 50px 0px;
+  .intro {
+    padding: 10px;
 
-			height: 600px;
-		}
+    @media only screen and (min-width: 600px) {
+      margin: 50px 0px;
 
-		background: url("./../../assets/images/bg-two.jpg") center center
-			no-repeat fixed;
-		background-size: cover;
-		.first-line {
-			display: flex;
-			align-items: baseline;
+      // height: 600px;
+    }
 
-			p {
-				margin: 0px 10px;
-				font-size: 20px;
-			}
-		}
+    // background: url("./../../assets/images/bg-two.jpg") center center
+    // 	no-repeat fixed;
+    // background-size: cover;
 
-		.welcome {
-			margin: 20px;
+    .first-line {
+      display: flex;
+      align-items: baseline;
 
-			//   color: #463737;
-			color: white;
-			font-weight: 100;
-			font-size: 100px;
+      p {
+        margin: 0px 10px;
+        font-size: 20px;
+      }
+    }
 
-			@media only screen and (min-width: 600px) {
-				margin: 50px;
+    .welcome {
+      margin: 20px;
 
-				font-size: 140px;
-			}
-			@media only screen and (min-width: 600px) {
-				font-size: 200px;
-			}
-		}
+      //   color: #463737;
+      color: white;
+      font-weight: 100;
+      font-size: 100px;
 
-		@media only screen and (min-width: 600px) {
-			// display: flex;
+      @media only screen and (min-width: 600px) {
+        margin: 50px;
 
-			// justify-content: flex-start;
+        font-size: 140px;
+      }
+      @media only screen and (min-width: 600px) {
+        font-size: 200px;
+      }
+    }
 
-			h1.second-line {
-				color: #7d7d7d;
-				font-size: 70px;
-			}
-		}
-	}
+    @media only screen and (min-width: 600px) {
+      // display: flex;
 
-	$colors: #2979cc, orange, #ca472a, green, black, orange;
-	$repeat: 20; // How often you want the pattern to repeat.
-	// Warning: a higher number outputs more CSS.
+      // justify-content: flex-start;
 
-	.we-sell {
-		font-size: 61px;
-		text-transform: lowercase;
-		// color: #e2aa00 !important;
-	}
-	.page-tagline {
-		@media only screen and (min-width: 600px) {
-			// margin: 50px;
-			font-size: 90px;
+      h1.second-line {
+        color: #7d7d7d;
+        font-size: 70px;
+      }
+    }
+  }
 
-			// font-size: 140px;
-		}
+  $colors: #2979cc, orange, #ca472a, green, black, orange;
+  $repeat: 20; // How often you want the pattern to repeat.
+  // Warning: a higher number outputs more CSS.
 
-		span {
-			margin: 0px 6px;
-			@for $i from 1 through $repeat {
-				$color: nth($colors, random(length($colors)));
+  .we-sell {
+    font-size: 40px;
+    text-transform: lowercase;
+    // color: #e2aa00 !important;
+  }
+  .page-heading {
+    margin-bottom: 20px;
+  }
+  .page-tagline {
+    @media only screen and (min-width: 600px) {
+      // margin: 50px;
+      font-size: 90px;
 
-				&:nth-child(#{length($colors)}n + #{$i}) {
-					// return
-					// {
-					background: lighten($color, 20%);
-					// }
+      // font-size: 140px;
+    }
 
-					color: $color;
-					// color:color;
-				}
-			}
-		}
-	}
+    span {
+      margin: 0px 6px;
+      @for $i from 1 through $repeat {
+        $color: nth($colors, random(length($colors)));
 
+        &:nth-child(#{length($colors)}n + #{$i}) {
+          // return
+          // {
+          background: lighten($color, 20%);
+          // }
 
-	.product-list {
-		justify-content: space-between;
+          color: $color;
+          // color:color;
+        }
+      }
+    }
+  }
 
-		margin-bottom: 100px;
+  .product-list {
+    justify-content: space-between;
 
+    margin-bottom: 100px;
+  }
 
-		
-		.product {
-			width: 46%;
-		}
-	}
+  // Css for Products on landing
+  .products {
+  }
 
-	// Css for Products on landing
-	.products {
-	
-	}
+  .top-gallery {
+    .card {
+      padding: 4px;
+      //   box-shadow: 0px 0px 10px 10px #e2e2e2;
+    }
 
-	.top-gallery {
-		.card {
-			padding: 4px;
-			//   box-shadow: 0px 0px 10px 10px #e2e2e2;
-		}
+    .carousel {
+      .carousel-item {
+        img {
+          width: 100%;
+        }
 
-		.carousel {
-			.carousel-item {
-				img {
-					width: 100%;
-				}
+        .carousel-caption {
+          h3 {
+            text-align: left;
+          }
 
-				.carousel-caption {
-					h3 {
-						text-align: left;
-					}
+          p {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
 
-					p {
-						text-align: left;
-					}
-				}
-			}
-		}
-	}
-
-
-	// CSS for Iframe instagram
-	iframe.instagram-media{
-		margin: 0px;
-		width: 99%;
-	}
+  // CSS for Iframe instagram
+  iframe.instagram-media {
+    margin: 0px;
+    width: 99%;
+  }
 }

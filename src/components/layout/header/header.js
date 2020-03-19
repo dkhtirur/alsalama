@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import "./header.scss";
 
-import logo from "./../../assets/images/header-logo.png";
+import logo from './../../../assets/images/header-logo.png';
 
 
 import {
@@ -41,10 +41,10 @@ export default class Header extends Component {
                 caption: "Home",
                 to: "/"
             },
-            {
-                caption: "Products",
-                to: "/products"
-            },
+            // {
+            //     caption: "Products",
+            //     to: "/products"
+            // },
             {
                 caption: "Collaborate with Us",
                 to: "/collaborate"

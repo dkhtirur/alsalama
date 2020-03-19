@@ -17,6 +17,11 @@
     // width: 90%;
 
     .navbar {
+
+      .navbar-toggler{
+        outline: none;
+        border: none;
+      }
       &.bg-light {
         background-color: white !important;
         width: 100%;
@@ -27,15 +32,24 @@
         width: 150px;
 
         @media only screen and (max-width: 600px) {
-          width: 260px;
+          width:225px;
         }
+
+
+        @media only screen and (max-width: 320px) {
+          width:190px;
+        }
+
+
       }
       // }
 
       ul.navbar-nav {
         li {
           &.nav-item {
+            // margin: 0px 10px;
             margin: 0px 10px;
+            padding: 12px 0px;
 
             a {
               color: gray;

@@ -150,7 +150,7 @@ export default class Stores extends Component {
                 </div>
 
                 <div className="stores-container" style={{ height: '100vh', width: '100%' }}>
-                    <GoogleMapReact
+                    {/* <GoogleMapReact
                         center={activeMarker}
                         bootstrapURLKeys={{ key: 'AIzaSyDi9OjnBEJ15dT9auEfNbOQvh-z5HGTohs' }}
                         defaultCenter={center.center}
@@ -171,7 +171,7 @@ export default class Stores extends Component {
                             })
                         }
 
-                    </GoogleMapReact>
+                    </GoogleMapReact> */}
 
                     <div className="list-group">
 

@@ -6,7 +6,7 @@ import {
     CarouselControl,
     CarouselCaption
 } from 'reactstrap';
-// import TextLoop from "react-text-loop";
+import TextLoop from "react-text-loop";
 
 import ProductList from './../../resources/common/product-list/product-list';
 
@@ -130,11 +130,14 @@ export default class Landing extends Component {
 
                 {/* Tabs for Categories or  */}
 
+                <h1 className="page-heading">
+                    About
+                    </h1>
+
 
                 {/* Product list */}
                 <ProductList products={products} />
                 {/* Product list ends*/}
-
 
 
                 {/* About Us Section */}
@@ -151,61 +154,10 @@ export default class Landing extends Component {
 
     First of its kind - For the first time in Kerala
                     </p>
-
-
-
-
-                    <div className="intro">
-
-                        {/* <div className="first-line">
-    <h1 className="welcome">hello<br /> there</h1>
-</div> */}
-
-                        <h1 className="second-line">
-                            {/* <TextLoop children={["clay works", "your complete clay solution", "", "everyday store", "everything store"]} /> */}
-                        </h1>
-                    </div>
-
-
                 </div>
 
                 {/* About Us Section Ends */}
 
-
-
-
-
-
-
-
-
-
-                {/* What we Sell */}
-
-                <div className="page-content products">
-
-                    <h1 className="page-heading we-sell">
-                        Products
-                    </h1>
-
-                    <h1 className="page-tagline">
-                        <span>Clay Bricks</span>
-                        <span>Clay Tiles</span>
-                        <span>Flooring Tiles</span>
-                        <span>Hurudees</span>
-
-                        <span>&</span>
-
-                        <span>lot more</span>
-
-                    </h1>
-
-
-
-                </div>
-
-
-                {/* What we Sell Ends */}
 
 
                 {/* Take A Glimpse */}
@@ -258,10 +210,10 @@ export default class Landing extends Component {
 
 
 
-                    <InstagramEmbed
+                    {/* <InstagramEmbed
 
                         url='https://www.instagram.com/p/BrA5Vh5lj12/'
-                        maxWidth={320}
+                        // maxWidth={320}
                         hideCaption={false}
                         containerTagName='div'
                         protocol=''
@@ -270,7 +222,7 @@ export default class Landing extends Component {
                         onSuccess={() => { }}
                         onAfterRender={() => { }}
                         onFailure={() => { }}
-                    />
+                    /> */}
 
                 </div>
 
@@ -284,12 +236,6 @@ export default class Landing extends Component {
                 </div>
 
                 {/* Overlay Cards Ends */}
-
-                <iframe
-                    title='google form'
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSfkFWeXk-_6H1_MdupA7OPqXccMqtx1tFCCk_5R5URBKiIgLQ/viewform?embedded=true"
-                    width="100%" height="930" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
-
 
             </div>)
     }
