@@ -1,15 +1,47 @@
 .landing {
   // display: flex;
 
-  margin-top: 20px;
+  .categories {
+    margin: 10px 0px;
+    display: flex;
+    .category-label {
+      cursor: pointer;
+      width: 200px;
+      height: 55px;
+      border-radius: 4px;
+      padding: 15px;
+      margin: 0px 10px;
+      border: 1px solid #e6e6e6;
+      &.active {
+        border-color: #af797e;
+        background: #ffece4;
+        color: #861822;
+        font-weight: bold;
+      }
+    }
+  }
+  .below{
+    display: flex;
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+
+  }
+
+  .product-list {
+    justify-content: space-between;
+
+    margin-bottom: 100px;
+    margin: 20px 10px;
+  }
+
+  // margin-top: 20px;
 
   .intro {
     padding: 10px;
 
     @media only screen and (min-width: 600px) {
       margin: 50px 0px;
-
-      // height: 600px;
     }
 
     // background: url("./../../assets/images/bg-two.jpg") center center
@@ -92,12 +124,6 @@
         }
       }
     }
-  }
-
-  .product-list {
-    justify-content: space-between;
-
-    margin-bottom: 100px;
   }
 
   // Css for Products on landing

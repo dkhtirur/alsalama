@@ -3,61 +3,61 @@ import React, { Component } from "react";
 
 import './stores.scss';
 
-import GoogleMapReact from 'google-map-react';
+// import GoogleMapReact from 'google-map-react';
 
 
 
-class Marker extends Component {
+// class Marker extends Component {
 
-    // static propTypes = {
-    //     text: PropTypes.string
-    // };
+//     // static propTypes = {
+//     //     text: PropTypes.string
+//     // };
 
-    constructor(props) {
-        super(props);
+//     constructor(props) {
+//         super(props);
 
-        this.state = {
-            marker: props.marker
-        }
-    }
+//         this.state = {
+//             marker: props.marker
+//         }
+//     }
 
-    componentWillReceiveProps = (nextProps) => {
-        // console.log(nextProps);
-        this.setState({ marker: nextProps.marker });
-    }
+//     componentWillReceiveProps = (nextProps) => {
+//         // console.log(nextProps);
+//         this.setState({ marker: nextProps.marker });
+//     }
 
-    render() {
+//     render() {
 
-        let { marker } = this.state;
+//         let { marker } = this.state;
 
-        let m = require('./../../assets/images/marker.png');
-        // let mActive = require('./../../assets/images/marker-active.png');
-
-
-        // console.log(this.props.hover);
-        // const style = this.props.$hover ? greatPlaceStyleHover : greatPlaceStyle;
-
-        return (
-            <div className={`marker ${marker.expanded ? 'marker-active' : 'marker-inactive'}`}>
-                <div className="marker-info">
-
-                    <p className="marker-caption">
-                        {marker.caption}
-
-                    </p>
+//         let m = require('./../../assets/images/marker.png');
+//         // let mActive = require('./../../assets/images/marker-active.png');
 
 
-                    <small className="marker-address">
-                        {marker.address}
-                    </small>
-                </div>
+//         // console.log(this.props.hover);
+//         // const style = this.props.$hover ? greatPlaceStyleHover : greatPlaceStyle;
 
-                <img alt='location' className="location" src={m}></img>
+//         return (
+//             <div className={`marker ${marker.expanded ? 'marker-active' : 'marker-inactive'}`}>
+//                 <div className="marker-info">
 
-            </div >
-        );
-    }
-}
+//                     <p className="marker-caption">
+//                         {marker.caption}
+
+//                     </p>
+
+
+//                     <small className="marker-address">
+//                         {marker.address}
+//                     </small>
+//                 </div>
+
+//                 <img alt='location' className="location" src={m}></img>
+
+//             </div >
+//         );
+//     }
+// }
 
 
 export default class Stores extends Component {

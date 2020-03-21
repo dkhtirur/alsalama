@@ -1,4 +1,8 @@
-import React, { Component } from "react";
+
+import React, { useState, useContext } from "react";
+
+import { GlobalContext } from './../../Store';
+
 import {
     Carousel,
     CarouselItem,
@@ -6,138 +10,82 @@ import {
     CarouselControl,
     CarouselCaption
 } from 'reactstrap';
-import TextLoop from "react-text-loop";
+
+import InstagramEmbed from 'react-instagram-embed';
 
 import ProductList from './../../resources/common/product-list/product-list';
 
 import './landing.scss';
 
-import InstagramEmbed from 'react-instagram-embed';
+export default function Landing() {
 
-const products = [{
-    name: 'Wire Cut Clay Brick',
-    image: require('./../../assets/images/brickhand1.jpg'),
-    dimensions: '8.5 * 4 * 3 inches',
-    cost: 'Rs 16 per piece'
+    const [animate, setAnimate] = useState(false);
 
-}, {
-    name: 'Wire Cut Clay Brick (First)',
-    image: require('./../../assets/images/bricks.jpg'),
-    dimensions: '8.5 * 4 * 3 inches',
-    cost: 'Rs 13 per piece'
-}, {
-    name: 'Hurudees',
-    image: require('./../../assets/images/products/hurudees.jpeg'),
-    dimensions: '2ft long',
-    cost: 'Rs 80 per piece'
-},
-{
-    name: 'Roofing Tile (Clay)',
-    image: require('./../../assets/images/products/tile.jpeg'),
-    // dimensions: '2ft long',
-    cost: 'Rs 28 per piece'
-}]
+    const [activeIndex, setActiveIndex] = useState(0)
 
+    const { products, items = [], categories } = useContext(GlobalContext);
 
-const items = [
-    {
-        src: require('./../../assets/images/glimpse/hall.jpg'),
-        altText: 'Freshest fruits for your daily life',
-        caption: 'Fruits and Vegetables directly from the farms.',
-        heading: 'Fresh fruits & vegetables'
-    }, {
-        src: require('./../../assets/images/glimpse/passage.jpg'),
-        heading: 'Refreshments',
-        caption: 'Our entire bay to store all your favourite refreshments. Have you tried the new Tropicana Orange.',
-    }, {
-        src: require('./../../assets/images/brickdisplay3.jpg'),
-        altText: 'Nuts to Coconuts',
-        heading: 'Nuts to Coconuts',
-        caption: 'We stock all of your grocery needs sourced fresh everyday'
-    }, {
-        src: require('./../../assets/images/glimpse/pathway.jpg'),
-        altText: 'Nuts to Coconuts',
-        heading: 'Nuts to Coconuts',
-        caption: 'We stock all of your grocery needs sourced fresh everyday'
-    }, {
-        src: require('./../../assets/images/glimpse/walk.jpg'),
-        altText: 'Nuts to Coconuts',
-        heading: 'Nuts to Coconuts',
-        caption: 'We stock all of your grocery needs sourced fresh everyday'
-    }, {
-        src: require('./../../assets/images/brickhand3.jpg'),
-        altText: 'Nuts to Coconuts',
-        heading: 'Nuts to Coconuts',
-        caption: 'We stock all of your grocery needs sourced fresh everyday'
-    },
-];
+    const [category, setCategory] = useState(categories[0]);
 
-export default class Landing extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = { activeIndex: 0 };
+    function onExiting() {
+        setAnimate(true);
     }
 
-
-
-    onExiting = () => {
-        this.animating = true;
+    function onExited() {
+        setAnimate(false);
     }
 
-    onExited = () => {
-        this.animating = false;
+    function next() {
+        if (animate) return;
+        const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+        // this.setState({ activeIndex: nextIndex });
     }
 
-    next = () => {
-        if (this.animating) return;
-        const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
-        this.setState({ activeIndex: nextIndex });
+    function previous() {
+
+        if (animate) return;
+        const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+        setActiveIndex(nextIndex);
+
     }
 
-    previous = () => {
-        if (this.animating) return;
-        const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
-        this.setState({ activeIndex: nextIndex });
+    function goToIndex(newIndex) {
+        if (animate) return;
+        setActiveIndex(newIndex);
     }
 
-    goToIndex = (newIndex) => {
-        if (this.animating) return;
-        this.setState({ activeIndex: newIndex });
-    }
-
-    render() {
-
-        const slides = items.map((item) => {
-            return (
-                <CarouselItem
-                    onExiting={this.onExiting}
-                    onExited={this.onExited}
-                    key={item.src}>
-                    <img src={item.src} alt={item.altText} />
-
-                    <CarouselCaption captionText={item.caption} captionHeader={item.heading} />
-
-                </CarouselItem>
-            );
-        });
-
-        const { activeIndex } = this.state;
-
+    const slides = items.map((item) => {
         return (
-            <div className="landing">
+            <CarouselItem
+                onExiting={onExiting}
+                onExited={onExited}
+                key={item.src}>
+                <img src={item.src} alt={item.altText} />
 
-                {/* Tabs for Categories or  */}
+                <CarouselCaption captionText={item.caption} captionHeader={item.heading} />
 
-                <h1 className="page-heading">
-                    About
-                    </h1>
+            </CarouselItem>
+        );
+    });
+
+    return (
+        <div className="landing">
+
+            {/* Categories */}
+            <div className="categories">
+                {categories.map((item) => <div key={item.name} onClick={() => setCategory(item)} className={`category-label ${item.name === category.name ? 'active' : ''}`}>{item.label}</div>)}
+            </div>
+            {/* Categories Ends */}
+
+            {/* Product list */}
+            <ProductList products={products} />
+            {/* Product list ends*/}
 
 
-                {/* Product list */}
-                <ProductList products={products} />
-                {/* Product list ends*/}
+            {/* Branding and Marketin */}
+
+            <div className="below">
 
 
                 {/* About Us Section */}
@@ -178,15 +126,15 @@ export default class Landing extends Component {
                         <div className="card">
                             <Carousel
                                 activeIndex={activeIndex}
-                                next={this.next}
-                                previous={this.previous}>
+                                next={next}
+                                previous={previous}>
 
-                                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+                                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
 
                                 {slides}
 
-                                <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-                                <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+                                <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+                                <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
                             </Carousel>
                         </div>
                     </div>
@@ -198,45 +146,49 @@ export default class Landing extends Component {
 
                 {/* Take A Glimpse Ends */}
 
-                <div className="follow-us page-content">
+            </div>
 
-                    <h1 className="page-heading">
-                        Follow Us
+
+
+            <div className="follow-us page-content">
+
+                <h1 className="page-heading">
+                    Follow Us
                     </h1>
 
-                    <p className="page-desc">
-                        Tune in to get frequent updates on offers and our products.
+                <p className="page-desc">
+                    Tune in to get frequent updates on offers and our products.
                     </p>
 
 
 
-                    {/* <InstagramEmbed
+                <InstagramEmbed
 
-                        url='https://www.instagram.com/p/BrA5Vh5lj12/'
-                        // maxWidth={320}
-                        hideCaption={false}
-                        containerTagName='div'
-                        protocol=''
-                        injectScript
-                        onLoading={() => { }}
-                        onSuccess={() => { }}
-                        onAfterRender={() => { }}
-                        onFailure={() => { }}
-                    /> */}
+                    url='https://www.instagram.com/p/BrA5Vh5lj12/'
+                    // maxWidth={320}
+                    hideCaption={false}
+                    containerTagName='div'
+                    protocol=''
+                    injectScript
+                    onLoading={() => { }}
+                    onSuccess={() => { }}
+                    onAfterRender={() => { }}
+                    onFailure={() => { }}
+                />
 
-                </div>
-
-
+            </div>
 
 
-                {/* Overlay Cards */}
 
-                <div className="overlay-cards">
 
-                </div>
+            {/* Overlay Cards */}
 
-                {/* Overlay Cards Ends */}
+            <div className="overlay-cards">
 
-            </div>)
-    }
+            </div>
+
+            {/* Overlay Cards Ends */}
+
+        </div>)
 }
+// }

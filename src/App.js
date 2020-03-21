@@ -6,12 +6,17 @@ import Header from "./components/layout/header/header";
 import Footer from './components/layout/footer/footer'
 // import logo from "./assets/images/logo.png";
 
+import { GlobalProvider } from './Store';
+
+
 import Landing from "./components/landing/landing";
-import Products from "./components/products/products";
+
+import ProductDetail from "./components/product-detail/product-detail";
+
 import Pottery from "./components/pottery/pottery";
 import Collaborate from "./components/collaborate/collaborate";
 import Gallery from "./components/gallery/gallery";
-import Stores from "./components/stores/stores";
+
 import Contact from "./components/contact/contact";
 
 
@@ -25,22 +30,34 @@ function App() {
         <Header />
         {/*  */}
         <div className="content">
-          <Route exact path="/" component={Landing} />
-          {/* <Route exact path="/products" component={Products} /> */}
-          <Route exact path="/pottery" component={Pottery} />
 
-          <Route exact path="/collaborate" component={Collaborate} />
+          {/* Global Provider  */}
+          <GlobalProvider>
 
-          <Route exact path="/gallery" component={Gallery} />
-          <Route path="/stores" component={Stores} />
-          <Route path="/contact" component={Contact} />
+            <Route exact path="/" component={Landing} />
 
-          {/* <Redirect to="/home" /> */}
+            <Route exact path="/product/:id" component={ProductDetail} />
+
+            {/* <Route exact path="/products" component={Products} /> */}
+            <Route exact path="/pottery" component={Pottery} />
+
+            <Route exact path="/collaborate" component={Collaborate} />
+
+            <Route exact path="/gallery" component={Gallery} />
+
+            {/* <Route path="/stores" component={Stores} /> */}
+            <Route path="/contact" component={Contact} />
+
+            {/* <Redirect to="/home" /> */}
+
+          </GlobalProvider>
+          {/* Global Provider  Ends */}
+
         </div>
-        </div>
+      </div>
 
-    <Footer/>
-    
+      <Footer />
+
     </Router>
   );
 }
