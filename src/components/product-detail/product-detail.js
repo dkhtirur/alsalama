@@ -16,7 +16,7 @@ export default function ProductDetail() {
 
     let { id } = useParams();
 
-    let product = products.filter((product) => product.id == id)[0];
+    let product = products.filter((product) => product.id === parseInt(id))[0];
 
     console.log(product);
 

@@ -11,7 +11,7 @@ import {
     CarouselCaption
 } from 'reactstrap';
 
-// import InstagramEmbed from 'react-instagram-embed';
+import InstagramEmbed from 'react-instagram-embed';
 
 import ProductList from './../../resources/common/product-list/product-list';
 
@@ -117,7 +117,7 @@ export default function Landing() {
                         Undestand us a little more by having a glimpse of how we master the art of brick making
                     </p>
 
-{/* 
+
                     <div className="top-gallery">
 
                         <div className="card">
@@ -134,7 +134,7 @@ export default function Landing() {
                                 <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
                             </Carousel>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
 
                 {/* Take A Glimpse Ends */}
@@ -152,11 +152,11 @@ export default function Landing() {
                     </p>
 
 
-{/* 
+
                 <InstagramEmbed
 
                     url='https://www.instagram.com/p/BrA5Vh5lj12/'
-                    // maxWidth={320}
+                    maxWidth={320}
                     hideCaption={false}
                     containerTagName='div'
                     protocol=''
@@ -165,7 +165,7 @@ export default function Landing() {
                     onSuccess={() => { }}
                     onAfterRender={() => { }}
                     onFailure={() => { }}
-                /> */}
+                />
 
             </div>
 
