@@ -42,12 +42,12 @@ export default function Footer() {
 
 
 
-                <iframe
+                {/* <iframe
                     title='google form'
                     src="https://docs.google.com/forms/d/e/1FAIpQLSfkFWeXk-_6H1_MdupA7OPqXccMqtx1tFCCk_5R5URBKiIgLQ/viewform?embedded=true"
                     height="930" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
 
-
+ */}
             </div>
 
 
@@ -63,7 +63,7 @@ export default function Footer() {
         <div className="footer-content">
             <div className="left">
                 {/* <img className="mb-2" src={logo} alt="" /> */}
-                <small className="d-block mb-3 text-muted">© 1993-2019</small>
+                <small className="d-block mb-3 text-muted">© 1993-2020</small>
             </div>
 
         </div>

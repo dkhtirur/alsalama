@@ -24,17 +24,20 @@ const initialState = {
         label: 'Wall',
         image: '',
         products: [{
+            id: 1,
             name: 'Wire Cut Clay Brick',
             image: require('./assets/images/brickhand1.jpg'),
             dimensions: '8.5 * 4 * 3 inches',
             cost: 'Rs 16 per piece'
 
         }, {
+            id: 2,
             name: 'Wire Cut Clay Brick (First)',
             image: require('./assets/images/bricks.jpg'),
             dimensions: '8.5 * 4 * 3 inches',
             cost: 'Rs 13 per piece'
         }, {
+            id: 3,
             name: 'Hurudees',
             image: require('./assets/images/products/hurudees.jpeg'),
             dimensions: '2ft long',
@@ -45,6 +48,7 @@ const initialState = {
         label: 'Roof',
         image: '',
         products: [{
+            id: 4,
             name: 'Roofing Tile (Clay)',
             image: require('./assets/images/products/tile.jpeg'),
             // dimensions: '2ft long',
@@ -53,23 +57,27 @@ const initialState = {
 
     }],
     products: [{
+        id: 1,
         name: 'Wire Cut Clay Brick',
         image: require('./assets/images/brickhand1.jpg'),
         dimensions: '8.5 * 4 * 3 inches',
         cost: 'Rs 16 per piece'
 
     }, {
+        id: 2,
         name: 'Wire Cut Clay Brick (First)',
         image: require('./assets/images/bricks.jpg'),
         dimensions: '8.5 * 4 * 3 inches',
         cost: 'Rs 13 per piece'
     }, {
+        id: 3,
         name: 'Hurudees',
         image: require('./assets/images/products/hurudees.jpeg'),
         dimensions: '2ft long',
         cost: 'Rs 80 per piece'
     },
     {
+        id: 4,
         name: 'Roofing Tile (Clay)',
         image: require('./assets/images/products/tile.jpeg'),
         // dimensions: '2ft long',

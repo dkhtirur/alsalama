@@ -11,7 +11,7 @@ import {
     CarouselCaption
 } from 'reactstrap';
 
-import InstagramEmbed from 'react-instagram-embed';
+// import InstagramEmbed from 'react-instagram-embed';
 
 import ProductList from './../../resources/common/product-list/product-list';
 
@@ -23,7 +23,7 @@ export default function Landing() {
 
     const [activeIndex, setActiveIndex] = useState(0)
 
-    const { products, items = [], categories } = useContext(GlobalContext);
+    const { items = [], categories } = useContext(GlobalContext);
 
     const [category, setCategory] = useState(categories[0]);
 
@@ -39,7 +39,6 @@ export default function Landing() {
         if (animate) return;
         const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
         setActiveIndex(nextIndex);
-        // this.setState({ activeIndex: nextIndex });
     }
 
     function previous() {
@@ -79,14 +78,12 @@ export default function Landing() {
             {/* Categories Ends */}
 
             {/* Product list */}
-            <ProductList products={products} />
+            <ProductList products={category.products} />
             {/* Product list ends*/}
-
 
             {/* Branding and Marketin */}
 
             <div className="below">
-
 
                 {/* About Us Section */}
                 <div className="about-us page-content">
@@ -120,7 +117,7 @@ export default function Landing() {
                         Undestand us a little more by having a glimpse of how we master the art of brick making
                     </p>
 
-
+{/* 
                     <div className="top-gallery">
 
                         <div className="card">
@@ -137,18 +134,12 @@ export default function Landing() {
                                 <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
                             </Carousel>
                         </div>
-                    </div>
-
-
-
-
+                    </div> */}
                 </div>
 
                 {/* Take A Glimpse Ends */}
 
             </div>
-
-
 
             <div className="follow-us page-content">
 
@@ -161,7 +152,7 @@ export default function Landing() {
                     </p>
 
 
-
+{/* 
                 <InstagramEmbed
 
                     url='https://www.instagram.com/p/BrA5Vh5lj12/'
@@ -174,20 +165,9 @@ export default function Landing() {
                     onSuccess={() => { }}
                     onAfterRender={() => { }}
                     onFailure={() => { }}
-                />
+                /> */}
 
             </div>
-
-
-
-
-            {/* Overlay Cards */}
-
-            <div className="overlay-cards">
-
-            </div>
-
-            {/* Overlay Cards Ends */}
 
         </div>)
 }
