@@ -38,8 +38,13 @@ export default function ProductDetail() {
                 </p>
 
                 <h3>
+               What are wire cut bricks used for?
+               
                     {product.cost}
                 </h3>
+                <h4>The wirecut bricks are the bricks manufacture in factory other than in yards like the normal bricks. The face finishing is much superior than the normal bricks. For the same reason, this bricks is used for exposed masonry. Wirecut bricks are used for exposed or non plastered construction of interior or exterior walls.</h4>
+
+
 
             </div>
 

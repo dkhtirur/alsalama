@@ -68,6 +68,8 @@ export default function Landing() {
         );
     });
 
+    console.log(categories);
+
     return (
         <div className="landing">
 
